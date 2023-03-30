@@ -8,7 +8,15 @@ function envParse(env) {
 	const variables = [];
 
 	for (const variable of env.split("\n")){
-		variables.push(variable.split("="));
+		const entities = variable.match(/(.*?)=(.*)/)
+
+		if (!entities[1].match(/^[a-zA-Z_]*$/))
+			return mavka.fall(context, mavka.makeText("ключ не є валідним"));
+
+		if (entities[2] == '')
+			return mavka.fall(context, mavka.makeText('значення елементу не може бути пустим'))
+
+		variables.push([entities[1], entities[2]]);
 	}
 
 	return variables;
