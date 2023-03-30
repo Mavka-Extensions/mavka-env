@@ -5,7 +5,7 @@
 Користуваня
 
 ```мавка
-підключити_розширення_з_мережі("https://raw.githubusercontent.com/Mavka-Extensions/mavka-env/main/env.m.js?token=GHSAT0AAAAAACAZGTFY6XXMTMZE2KCFZOXKZBF4FKA")
+підключити_розширення_з_мережі("https://raw.githubusercontent.com/Mavka-Extensions/mavka-env/main/env.m.js")
 
 ;; отримати папку, де знаходиться ваш проєкт
 данна_папка = ЗмінніОточення.данна_папка
